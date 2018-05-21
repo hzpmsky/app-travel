@@ -35,3 +35,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 cnpm i sass-loader node-sass --save-dev
+#less的安装与配置
+npm install less less-loader--save
+在build文件夹中的webpackage.base.conf.js中配置：
+
+{
+  test:/\.less$/,
+  loader:'less-loader'
+}

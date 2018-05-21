@@ -1,15 +1,21 @@
 <template>
 <div>
 <div class="header">
-   <input>请输入城市名或拼音</input>
+<home-header></home-header>
 </div>
     </div>
 </template>
 <script>
+import HomeHeader from './components/header'
+export default {
+components: {
+  HomeHeader
+}
+}
 </script>
 <style>
    .header{
-   background-color:blue;
+   /* background-color:blue; */
    line-height:1.2rem;
    }
 </style>
