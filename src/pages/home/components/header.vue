@@ -20,6 +20,7 @@
   background-color: #00bcd4;
   line-height: 1.2rem;
   color:#fff;
+  width:100%;
   .header-left {
     width: 2.26rem;
     float: left;

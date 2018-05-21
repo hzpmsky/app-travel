@@ -43,3 +43,6 @@ npm install less less-loader--save
   test:/\.less$/,
   loader:'less-loader'
 }
+
+
+抖动：图片未加载时，高度为0；加载后高度撑开；
