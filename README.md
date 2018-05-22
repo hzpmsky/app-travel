@@ -46,3 +46,7 @@ npm install less less-loader--save
 
 
 抖动：图片未加载时，高度为0；加载后高度撑开；
+
+#创建分支
+1. git checkout -b name
+2./home icons.vue
