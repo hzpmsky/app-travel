@@ -2,9 +2,9 @@
   <div>
     <div class="weekend-title">周末去哪儿</div>
     <div class="item" v-for="item of weekendList" :key="item.id">
-      <img class="item-img" :src="item.url" alt="">
+      <img class="item-img" :src="item.imgUrl" alt="">
       <div>
-        <p class="item-tag">{{item.tag}}</p>
+        <p class="item-tag">{{item.title}}</p>
         <p class="item-desc">{{item.desc}}</p>
       </div>
     </div>
@@ -17,30 +17,32 @@ export default {
   data() {
     return {
       imgUrl: ImgUrl,
-      weekendList: [{
-        id: '001',
-        url: ImgUrl,
-        tag: '杭州必游TOP10',
-        desc: '爱上杭州的碧水蓝天'
-      },
-      {
-        id: '002',
-        url: ImgUrl,
-        tag: '温泉有水上乐园',
-        desc: '泡泡温泉，吹吹海风，深觉人生美好'
-      },
-      {
-        id: '003',
-        url: ImgUrl,
-        tag: '广州长隆野生动物世界',
-        desc: '中国最具国际标准的国家级野生动物园'
-      },
-      {
-        id: '004',
-        url: ImgUrl,
-        tag: '珠江夜游',
-        desc: '相伴更多，欢乐更多，无与伦比'
-      }]
+      weekendList: [
+      //   {
+      //   id: '001',
+      //   url: ImgUrl,
+      //   tag: '杭州必游TOP10',
+      //   desc: '爱上杭州的碧水蓝天'
+      // },
+      // {
+      //   id: '002',
+      //   url: ImgUrl,
+      //   tag: '温泉有水上乐园',
+      //   desc: '泡泡温泉，吹吹海风，深觉人生美好'
+      // },
+      // {
+      //   id: '003',
+      //   url: ImgUrl,
+      //   tag: '广州长隆野生动物世界',
+      //   desc: '中国最具国际标准的国家级野生动物园'
+      // },
+      // {
+      //   id: '004',
+      //   url: ImgUrl,
+      //   tag: '珠江夜游',
+      //   desc: '相伴更多，欢乐更多，无与伦比'
+      // }
+      ]
     }
   }
 }

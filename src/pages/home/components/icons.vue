@@ -3,7 +3,7 @@
     <div class="icon" v-for="item of iconsList" :key="item.id">
       <div class="icon-img">
         <img :src="item.imgUrl" />
-        <div class="title">{{item.title}}</div>
+        <div class="title">{{item.desc}}</div>
       </div>
     </div>
   </div>
@@ -13,47 +13,49 @@ export default {
   name: 'Icons',
   data() {
     return {
-      iconsList: [{
-        id: '001',
-        imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-       // imgUrl: '../../assets/images/index/icons/icon_01.png',
-        title: '断桥'
-      },
-      {
-        id: '002',
-        imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-        title: '苏堤'
-      },
-      {
-        id: '003',
-        imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-        title: '杨公堤'
-      },
-      {
-        id: '004',
-        imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-        title: '岳庙'
-      },
-      {
-        id: '005',
-        imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-        title: '楼外楼'
-      },
-      {
-        id: '006',
-        imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-        title: '西湖'
-      },
-      {
-        id: '007',
-        imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-        title: '西溪'
-      },
-      {
-        id: '008',
-        imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-        title: '运河'
-      }]
+      iconsList: [
+      //   {
+      //   id: '001',
+      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
+      //  // imgUrl: '../../assets/images/index/icons/icon_01.png',
+      //   title: '断桥'
+      // },
+      // {
+      //   id: '002',
+      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
+      //   title: '苏堤'
+      // },
+      // {
+      //   id: '003',
+      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
+      //   title: '杨公堤'
+      // },
+      // {
+      //   id: '004',
+      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
+      //   title: '岳庙'
+      // },
+      // {
+      //   id: '005',
+      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
+      //   title: '楼外楼'
+      // },
+      // {
+      //   id: '006',
+      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
+      //   title: '西湖'
+      // },
+      // {
+      //   id: '007',
+      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
+      //   title: '西溪'
+      // },
+      // {
+      //   id: '008',
+      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
+      //   title: '运河'
+      // }
+      ]
     }
   }
 }

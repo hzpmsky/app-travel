@@ -6,7 +6,7 @@
         <img :src="item.imgUrl" />
       </swiper-slide>
       <!-- Optional controls -->
-      <div v-if="swiperList.length === 0" class="swiper-pagination" slot="pagination"></div>
+      <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -19,25 +19,14 @@ export default {
         pagination: '.swiper-pagination',
         loop: true
       },
-      swiperList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts2/1701/4c/abb969ff3ca39c02.jpg_r_390x260x90_710992c9.jpg'
-      },
-      {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts3/1612/3d/1814160152b32202.jpg_r_390x260x90_1aaf4e97.jpg'
-      },
-      {
-        id: '0003',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts5/1612/7a/dd90fc40f94ce602.jpg_r_390x260x90_0e51e5ce.jpg'
-      }]
+      swiperList: []
     }
   }
 }
 </script>
 <style lang="less" scoped>
 .swiper {
-  height:16.25rem;
+  height:12.5rem;
   background:rgba(96,96,96,0.25)
 }
 </style>
