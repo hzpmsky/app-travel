@@ -60,6 +60,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .icons {
+  margin-top: 0.5rem;
   height: 0;
   padding-bottom: 50%;
   .icon {

@@ -50,3 +50,6 @@ npm install less less-loader--save
 #创建分支
 1. git checkout -b name
 2./home icons.vue
+
+#问题记录
+1.子元素未加载，父元素的高度
