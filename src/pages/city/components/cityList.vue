@@ -8,13 +8,13 @@
       <div>
         <div class="hotCity-title">热门城市</div>
         <div class="hotCity-all">
-          <div class="hotCity" v-for="item of hotCity">{{item.hotCity}}</div>
+          <div class="hotCity" v-for="item of hotCities" :key="item.id">{{item.name}}</div>
         </div>
       </div>
       <div class="list">
-        <div class="item" v-for="item of cityList">
-          <div class='list-title'>{{item.itemCode}}</div>
-          <div class="list-city" v-for="data of item.itemCity">{{data}}</div>
+        <div class="item" v-for="(item,key) of cityList">
+          <div class='list-title'>{{key}}</div>
+          <div class="list-city" v-for="data of item">{{data.name}}</div>
         </div>
       </div>
     </div>
@@ -25,41 +25,19 @@ export default {
   name: 'CityList',
   data() {
     return {
-      hotCity: [
-        { id: '001', hotCity: '北京' },
-        { id: '002', hotCity: '上海' },
-        { id: '003', hotCity: '南京' },
-        { id: '004', hotCity: '西安' },
-        { id: '005', hotCity: '武汉' },
-        { id: '006', hotCity: '成都' },
-        { id: '007', hotCity: '拉萨' },
-        { id: '008', hotCity: '桂林' },
-        { id: '009', hotCity: '广州' },
-        { id: '0010', hotCity: '南京' },
-        { id: '0011', hotCity: '厦门' },
-        { id: '0012', hotCity: '杭州' },
-        { id: '0013', hotCity: '重庆' },
-        { id: '0014', hotCity: '香港' }
-      ],
-cityList:[
-{itemCode:'A',itemCity:['阿拉善','安康','安阳','安陆','阿克苏地区','阿克苏地区']},
-{itemCode:'B',itemCity:['保定','包头','本溪','保定','包头','本溪','保定','包头','本溪']},
-{itemCode:'C',itemCity:['长春','池州','沧州','曹妃甸','长春','池州','沧州','曹妃甸','长春','池州','沧州','曹妃甸']},
-{itemCode:'D',itemCity:['大连','当阳','大悟','东莞','东营','大连','当阳','大悟','东莞','东营']},
-{itemCode:'E',itemCity:['鄂尔多斯','鄂州','恩施','峨眉','鄂尔多斯','鄂州','恩施','峨眉']},
-{itemCode:'F',itemCity:['阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区']},
-{itemCode:'G',itemCity:['阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区']},
-{itemCode:'H',itemCity:['阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区']},
-{itemCode:'I',itemCity:['阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区']},
-{itemCode:'J',itemCity:['阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区','阿克苏地区']},
-]
+      hotCities: [],
+      cityList: { type: Object }
     }
+  },
+  mounted: function () {
+    console.log('this.cityAll')
+    console.log(this.cityList)
   }
 }
 </script>
 <style lang="less" scoped>
 .location-title {
-  background-color: gray;
+  background-color: rgba(96, 96, 96, 0.15);
   height: 1.5rem;
   text-align: left;
 }
@@ -73,7 +51,7 @@ cityList:[
   border-radius: 5px;
 }
 .hotCity-title {
-  background-color: gray;
+  background-color: rgba(96, 96, 96, 0.15);
   height: 1.5rem;
   text-align: left;
 }
@@ -92,7 +70,7 @@ cityList:[
   }
 }
 .list-title {
-  background-color: gray;
+  background-color: rgba(96, 96, 96, 0.15);
   height: 1.5rem;
   line-height: 1.5rem;
   text-align: left;

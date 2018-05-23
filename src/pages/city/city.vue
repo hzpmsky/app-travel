@@ -1,7 +1,7 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-list ref="cityList"></city-list>
+    <city-list ref="cityPage"></city-list>
     <char-list></char-list>
   </div>
 </template>
@@ -26,11 +26,14 @@ export default {
     getCityInfo() {
       axios.get('/api/city.json').then(
         res => {
-          console.log(res)
+          //console.log(res)
+          this.$refs['cityPage'].hotCities = res.data.data.hotCities
+          this.$refs['cityPage'].cityList = res.data.data.cities
+          console.log(this.$refs['cityPage'].cityList)
         })
     }
   },
-  mounted: function() {
+  created: function () {
     this.getCityInfo()
   }
 }
