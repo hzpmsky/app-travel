@@ -54,3 +54,8 @@ npm install less less-loader--save
 #问题记录
 1.子元素未加载，父元素的高度
 npm i axios --save
+npm install better-scroll --save
+
+字母列表：charList.vue
+
+div中的文本内容居中: line-height = height

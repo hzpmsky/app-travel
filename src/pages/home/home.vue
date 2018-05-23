@@ -29,24 +29,24 @@ export default {
     }
   },
   methods: {
-    getHomeInfo() {
-      // axios.get('/static/mock/index.json').then(this.getHomeInfoSucc)
-      axios.get('/api/index.json').then(this.getHomeInfoSucc)
-    },
-    getHomeInfoSucc(res) {
-      console.log(res)
-      // 父传子
-      this.$refs['swiper'].swiperList = res.data.data.swiperList
-      this.$refs['icons'].iconsList = res.data.data.iconList
-console.log(this.$refs['icons'].iconsList)
-      this.$refs['recommond'].recommendList = res.data.data.recommendList
-     // console.log(this.$refs['recommond'].recommendList)
-      this.$refs['weekend'].weekendList = res.data.data.weekendList
-      //console.log(this.$refs['weekend'].weekendList)
-    }
+//     getHomeInfo() {
+//       // axios.get('/static/mock/index.json').then(this.getHomeInfoSucc)
+//       axios.get('/api/index.json').then(this.getHomeInfoSucc)
+//     },
+//     getHomeInfoSucc(res) {
+//       console.log(res)
+//       // 父传子
+//       this.$refs['swiper'].swiperList = res.data.data.swiperList
+//       this.$refs['icons'].iconsList = res.data.data.iconList
+// console.log(this.$refs['icons'].iconsList)
+//       this.$refs['recommond'].recommendList = res.data.data.recommendList
+//      // console.log(this.$refs['recommond'].recommendList)
+//       this.$refs['weekend'].weekendList = res.data.data.weekendList
+//       //console.log(this.$refs['weekend'].weekendList)
+//     }
   },
   mounted() {
-    this.getHomeInfo()
+    // this.getHomeInfo()
   }
 }
 </script>

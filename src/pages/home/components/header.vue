@@ -6,10 +6,12 @@
     <div class='header-input'>
       <input type='text' class='input' placeholder="请输入汉字或拼音"></input>
     </div>
+    <router-link to="/city">
     <div class='header-right'>
       <span>城市</span>
       <span class="iconfont arrow-down">&#xe62d;</span>
     </div>
+    </router-link>
   </div>
 </template>
 <script>
