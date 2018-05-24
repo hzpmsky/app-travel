@@ -59,3 +59,15 @@ npm install better-scroll --save
 字母列表：charList.vue
 
 div中的文本内容居中: line-height = height
+
+:to=  "'/detail/' + item.id"
+动态路由：path:'detail/:id'
+
+img的外层div: overflow:hidden  heihgt:0
+padding-bottom:
+
+webpack.base:公共组件
+overflow:inherit
+
+变量绑定 :src
+一开始轮播图隐藏，后显示无法自动计算宽度
