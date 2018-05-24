@@ -68,6 +68,18 @@ padding-bottom:
 
 webpack.base:公共组件
 overflow:inherit
+钩子：activated(){
+window.addEventListener('scroll',callback)
+}
+deactivated(){
+remove  解绑
+}
+
+:style="var"
+var:{opacity:0}
 
 变量绑定 :src
 一开始轮播图隐藏，后显示无法自动计算宽度
+
+
+递归组件：组件内调用组件自身

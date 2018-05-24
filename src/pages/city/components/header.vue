@@ -22,7 +22,7 @@ export default {
   methods: {
     jumpToHome() {
       //this.$router.go('/home')
-      this.$router.push({path:'/home'})
+     this.$router.push({path:'/home'})
     }
   }
 }
