@@ -83,3 +83,16 @@ var:{opacity:0}
 
 
 递归组件：组件内调用组件自身
+
+
+keep-alive  exclude="" 取消缓存
+
+滚动行为：多所有路由导航，页面滚动到顶部scrollBehav
+<transition>
+<slot></solt>
+<transition>
+<style>
+v-enter,v-leave-to,v-enter-active,v-leave-active
+</style>
+
+引入fade页，包裹标签

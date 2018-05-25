@@ -1,8 +1,8 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-list ref="cityPage"></city-list>
-    <char-list></char-list>
+    <city-list ref="cityPage" :letter="char"></city-list>
+    <char-list @changeLetter="charChange"></char-list>
   </div>
 </template>
 <script>
@@ -19,18 +19,22 @@ export default {
   },
   data() {
     return {
-      scroll: null
+      scroll: null,
+      char: ''
     }
   },
   methods: {
     getCityInfo() {
       axios.get('/api/city.json').then(
         res => {
-          //console.log(res)
           this.$refs['cityPage'].hotCities = res.data.data.hotCities
           this.$refs['cityPage'].cityList = res.data.data.cities
           console.log(this.$refs['cityPage'].cityList)
         })
+    },
+    charChange(val) {
+      this.char = val
+      console.log(val)
     }
   },
   created: function () {
