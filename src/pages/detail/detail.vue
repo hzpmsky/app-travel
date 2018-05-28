@@ -3,7 +3,6 @@
     <detail-header></detail-header>
     <detail-hidden></detail-hidden>
     <detail-ticket :categoryList="categoryList"></detail-ticket>
-    <div class="test"></div>
   </div>
 </template>
 <script>
@@ -43,9 +42,6 @@ export default {
 </script>
 <style lang="less">
 @import "../../assets/less/common.less";
-.test {
-  height: 40rem;
-}
 </style>
 
 

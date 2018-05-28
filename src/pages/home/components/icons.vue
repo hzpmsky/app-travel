@@ -14,47 +14,6 @@ export default {
   data() {
     return {
       iconsList: [
-      //   {
-      //   id: '001',
-      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-      //  // imgUrl: '../../assets/images/index/icons/icon_01.png',
-      //   title: '断桥'
-      // },
-      // {
-      //   id: '002',
-      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-      //   title: '苏堤'
-      // },
-      // {
-      //   id: '003',
-      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-      //   title: '杨公堤'
-      // },
-      // {
-      //   id: '004',
-      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-      //   title: '岳庙'
-      // },
-      // {
-      //   id: '005',
-      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-      //   title: '楼外楼'
-      // },
-      // {
-      //   id: '006',
-      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-      //   title: '西湖'
-      // },
-      // {
-      //   id: '007',
-      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-      //   title: '西溪'
-      // },
-      // {
-      //   id: '008',
-      //   imgUrl: 'https://img1.qunarzz.com/travel/poi/1805/f1/80f1d63ca01fa937.jpg',
-      //   title: '运河'
-      // }
       ]
     }
   }
@@ -62,6 +21,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .icons {
+  width:100%;
   margin-top: 0.5rem;
   height: 0;
   padding-bottom: 50%;

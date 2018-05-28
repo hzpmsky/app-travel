@@ -96,3 +96,10 @@ v-enter,v-leave-to,v-enter-active,v-leave-active
 </style>
 
 引入fade页，包裹标签
+
+现象：绑定的click方法不被触发
+解决：fastClick的安装与使用
+npm install fastclick--save
+在main.js中：
+import fastclick from 'clickfast'
+FastClick.attach(document.body)

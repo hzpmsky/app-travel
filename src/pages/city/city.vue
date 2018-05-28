@@ -1,7 +1,7 @@
 <template>
   <div>
-    <city-header></city-header>
-    <city-list ref="cityPage" :letter="char"></city-list>
+    <city-header @getKeyWord="keyWord"></city-header>
+    <city-list ref="cityPage" :letter="char" :keyword="keyword"></city-list>
     <char-list @changeLetter="charChange"></char-list>
   </div>
 </template>
@@ -20,7 +20,9 @@ export default {
   data() {
     return {
       scroll: null,
-      char: ''
+      char: '',
+      keyword: '',
+      charListShow: true
     }
   },
   methods: {
@@ -35,10 +37,19 @@ export default {
     charChange(val) {
       this.char = val
       console.log(val)
+    },
+    keyWord(val) {
+      this.keyword = val;
+      console.log('city:this.keyword:')
+      console.log(this.keyword)
     }
   },
   created: function () {
     this.getCityInfo()
+  },
+  watch: {
+    keyword() {
+    }
   }
 }
 </script>

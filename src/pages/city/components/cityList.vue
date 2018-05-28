@@ -1,16 +1,16 @@
 <template>
-  <div>
+  <div v-if="charListShow">
     <div class="wraper" ref="wraper">
       <!--所在城市模块-->
       <div class="location">
         <div class="location-title">您的位置</div>
-        <div class="location-city">北京</div>
+        <div class="location-city">{{this.$store.state.city}}</div>
       </div>
       <!--热门城市模块-->
       <div>
         <div class="hotCity-title">热门城市</div>
         <div class="hotCity-all">
-          <div class="hotCity" v-for="item of hotCities" :key="item.id">{{item.name}}</div>
+          <div class="hotCity" v-for="item of hotCities" :key="item.id" @click="handleClick(item.name)">{{item.name}}</div>
         </div>
       </div>
       <!--城市列表模块-->
@@ -19,7 +19,7 @@
           <!--字母-->
           <div class='list-title'>{{key}}</div>
           <!--字母下的城市-->
-          <div class="list-city" v-for="data of item">{{data.name}}</div>
+          <div class="list-city" v-for="data of item" >{{data.name}}</div>
         </div>
       </div>
     </div>
@@ -30,20 +30,21 @@ import BScroll from 'better-scroll';
 export default {
   name: 'CityList',
   props: {
-    letter: String
+    letter: String,
+    keyword: ''
   },
   data() {
     return {
       hotCities: [],
-      cityList: { type: Object }
+      cityList: { type: Object },
+      charListShow: true
     }
   },
-  mounted: function () {
-    console.log('this.cityAll')
-    console.log(this.cityList)
-    this.scroll = new BScroll(this.$refs['wraper'])
-    console.log('this.scroll')
-    console.log(this.scroll)
+  methods: {
+    handleClick(city) {
+      //console.log(city)
+      this.$store.dispatch('changeHotCity',city)
+    }
   },
   watch: {
     letter() {
@@ -51,13 +52,27 @@ export default {
         //获取letter标签
         // console.log(this.$refs[this.letter])
         if (this.$refs[this.letter]) {
-        //  console.log(this.$refs[this.letter][0])
+          //  console.log(this.$refs[this.letter][0])
           const element = this.$refs[this.letter][0]
           //滚动scrollToElement方法存在于scroll 的原型中
-          console.log(this.scroll.scrollToElement)
+          //        console.log(this.scroll.scrollToElement)
           this.scroll.scrollToElement(element)
         }
       }
+    },
+    // keyword  为null没有执行
+    keyword() {
+      if (this.keyword.trim()) {
+        //      console.log('charList keyword:' + this.keyword)
+        this.charListShow = false
+      } else {
+        this.charListShow = true
+      }
+    }
+  },
+  mounted: function () {
+    if (this.$refs['wraper']) {
+      this.scroll = new BScroll(this.$refs['wraper'])
     }
   }
 }
