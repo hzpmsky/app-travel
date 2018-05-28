@@ -19,7 +19,7 @@
           <!--字母-->
           <div class='list-title'>{{key}}</div>
           <!--字母下的城市-->
-          <div class="list-city" v-for="data of item" >{{data.name}}</div>
+          <div class="list-city" v-for="data of item" @click="handleClick(data.name)">{{data.name}}</div>
         </div>
       </div>
     </div>
@@ -43,7 +43,8 @@ export default {
   methods: {
     handleClick(city) {
       //console.log(city)
-      this.$store.dispatch('changeHotCity',city)
+      this.$store.commit('changeHotCity', city)
+      this.$router.push('/')
     }
   },
   watch: {

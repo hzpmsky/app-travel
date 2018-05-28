@@ -58,15 +58,15 @@ npm install better-scroll --save
 
 字母列表：charList.vue
 
-div中的文本内容居中: line-height = height
+2.div中的文本内容居中: line-height = height
 
-:to=  "'/detail/' + item.id"
+3.:to=  "'/detail/' + item.id"
 动态路由：path:'detail/:id'
 
-img的外层div: overflow:hidden  heihgt:0
+4.img的外层div: overflow:hidden  heihgt:0
 padding-bottom:
 
-webpack.base:公共组件
+5.webpack.base:公共组件
 overflow:inherit
 钩子：activated(){
 window.addEventListener('scroll',callback)
@@ -78,14 +78,14 @@ remove  解绑
 :style="var"
 var:{opacity:0}
 
-变量绑定 :src
+6.变量绑定 :src
 一开始轮播图隐藏，后显示无法自动计算宽度
 
 
-递归组件：组件内调用组件自身
+7.递归组件：组件内调用组件自身
 
 
-keep-alive  exclude="" 取消缓存
+8.keep-alive  exclude="" 取消缓存
 
 滚动行为：多所有路由导航，页面滚动到顶部scrollBehav
 <transition>
@@ -95,11 +95,13 @@ keep-alive  exclude="" 取消缓存
 v-enter,v-leave-to,v-enter-active,v-leave-active
 </style>
 
-引入fade页，包裹标签
+9.引入fade页，包裹标签
 
-现象：绑定的click方法不被触发
+10.现象：绑定的click方法不被触发
 解决：fastClick的安装与使用
 npm install fastclick--save
 在main.js中：
 import fastclick from 'clickfast'
 FastClick.attach(document.body)
+
+
