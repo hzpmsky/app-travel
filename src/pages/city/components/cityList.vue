@@ -56,7 +56,6 @@ export default {
           //  console.log(this.$refs[this.letter][0])
           const element = this.$refs[this.letter][0]
           //滚动scrollToElement方法存在于scroll 的原型中
-          //        console.log(this.scroll.scrollToElement)
           this.scroll.scrollToElement(element)
         }
       }

@@ -10,15 +10,19 @@
         <div class="img-num">39</div>
       </div>
     </div>
-    <common-banner v-show="bannerShow===true" :imgs="imgs" @close="closeBanner"></common-banner>
+    <fade-animation>
+      <common-banner v-show="bannerShow===true" :imgs="imgs" @close="closeBanner"></common-banner>
+    </fade-animation>
   </div>
 </template>
 <script>
 import CommonBanner from 'components/banner'
+import fadeAnimation from 'components/fadeAnimation'
 export default {
   name: "DetailHeader",
   components: {
-    CommonBanner
+    CommonBanner,
+    fadeAnimation
   },
   data() {
     return {
@@ -39,8 +43,8 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.container{
-  margin-bottom:3rem;
+.container {
+  margin-bottom: 3rem;
 }
 .header-img {
   width: 100%;

@@ -96,6 +96,11 @@ v-enter,v-leave-to,v-enter-active,v-leave-active
 </style>
 
 9.引入fade页，包裹标签
+<transition>
+    <slot></slot>
+  </transition>
+
+需要动画的组件，用fade包裹该组件
 
 10.现象：绑定的click方法不被触发
 解决：fastClick的安装与使用
